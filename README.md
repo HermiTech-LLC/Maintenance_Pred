@@ -1,3 +1,4 @@
+
 # Predictive Maintenance Model
 
 This script (`mainPre.py`) trains a neural network model to predict equipment failure based on sensor data.
@@ -6,8 +7,11 @@ This script (`mainPre.py`) trains a neural network model to predict equipment fa
 
 - Handles missing values
 - Feature engineering capabilities including interaction terms and polynomial features
-- Model training with early stopping to prevent overfitting
-- Model evaluation with accuracy, loss, classification report, and confusion matrix
+- Class imbalance handling using SMOTE
+- Hyperparameter tuning with GridSearchCV
+- Cross-validation with StratifiedKFold
+- Model training with early stopping and model checkpoint to save the best model
+- Model evaluation with accuracy, loss, classification report, confusion matrix, and ROC AUC score
 - Model and scaler saving for deployment
 - Visualization of training history
 
@@ -17,6 +21,7 @@ This script (`mainPre.py`) trains a neural network model to predict equipment fa
 - NumPy
 - Pandas
 - Scikit-learn
+- Imbalanced-learn
 - Matplotlib
 - Joblib
 
@@ -24,7 +29,7 @@ This script (`mainPre.py`) trains a neural network model to predict equipment fa
 
 Install the required libraries:
 ```
-pip install tensorflow numpy pandas scikit-learn matplotlib joblib
+pip install tensorflow numpy pandas scikit-learn imbalanced-learn matplotlib joblib
 ```
 
 ## Usage
